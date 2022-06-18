@@ -71,21 +71,22 @@ output * bg /usr/share/backgrounds/default.png fill
     # Start your launcher
     bindsym $mod+Space exec $menu
 
+    ### TODO ###
+
+    # window resizing
+    # remove swaybar
+    # dunst for notifications
+    # install script
 
     # -- Screenshots          
     # awful.key({  }, "Print", function () awful.spawn.with_shell("flameshot gui -p ~/flameshots/") end,
     #           {description = "flameshot", group = "launcher"}),
+
     # -- Rofi    
     # awful.key({ modkey }, "space", function () awful.spawn.with_shell("rofi -show drun") end,
     #           {description = "rofi drun", group = "launcher"}),
     # awful.key({ altkey }, "Tab", function () awful.spawn.with_shell("rofi -show window") end,
     #           {description = "open windows", group = "launcher"}),
-
-    # -- Bash Scripts
-    # awful.key({ altkey }, "d", function () awful.spawn.with_shell("bash ~/code/bash/dashboard.sh") end,
-    #           {description = "dashboard", group = "launcher"}), 
-    # awful.key({ altkey }, "p", function () awful.spawn.with_shell("bash ~/code/bash/finance.sh") end,
-    #           {description = "pay - finance", group = "launcher"}),
 
     # User Programs
     bindsym $mod+b exec google-chrome
