@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Obsidian
+Comment=Obsidian
+Exec=/home/z/AppImages/Obsidian-0.14.5.AppImage
+Terminal=false
+Type=Application
+MimeType=x-scheme-handler/obsidian;

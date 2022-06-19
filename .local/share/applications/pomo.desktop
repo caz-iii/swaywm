@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Pomotroid
+Comment=Pomotroid
+Exec=/home/z/AppImages/pomotroid-0.13.0-linux.AppImage --no-sandbox
+Terminal=false
+Type=Application

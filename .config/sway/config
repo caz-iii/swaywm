@@ -18,7 +18,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show drun | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -71,26 +71,21 @@ output * bg /usr/share/backgrounds/default.png fill
     # Start your launcher
     bindsym $mod+Space exec $menu
 
+    # alt tabbing
+    bindsym Mod1+tab exec wofi --show window
+
     ### TODO ###
 
-    # window resizing shortcut
-    # remove swaybar
     # dunst for notifications
     # install script
-    # multi monitor
-    # make window master shortcut
-    # spawn application floating: gnome calculator
+    # multi monitors
+    # wofi - show all opened windows
+    # get flameshot working
 
 
     # -- Screenshots          
     # awful.key({  }, "Print", function () awful.spawn.with_shell("flameshot gui -p ~/flameshots/") end,
     #           {description = "flameshot", group = "launcher"}),
-
-    # -- Rofi    
-    # awful.key({ modkey }, "space", function () awful.spawn.with_shell("rofi -show drun") end,
-    #           {description = "rofi drun", group = "launcher"}),
-    # awful.key({ altkey }, "Tab", function () awful.spawn.with_shell("rofi -show window") end,
-    #           {description = "open windows", group = "launcher"}),
 
     # User Programs
     bindsym $mod+b exec google-chrome
@@ -102,6 +97,10 @@ output * bg /usr/share/backgrounds/default.png fill
     # Bash Scripts
     bindsym Mod1+d exec bash ~/code/bash/dashboard.sh
     bindsym Mod1+p exec bash ~/code/bash/finance.sh
+
+    # Spawn Floating
+    # swaymsg -t get_tree
+    for_window [app_id="org.gnome.Calculator"] floating enable
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -226,25 +225,26 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-#bindsym $mod+r mode "resize"
+
+bindsym $mod+r mode "resize"
 
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+# bar {
+#     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
 
 include /etc/sway/config.d/*
 default_border pixel 4

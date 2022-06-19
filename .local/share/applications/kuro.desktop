@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Kuro
+Comment=To-Do
+Exec=/home/z/AppImages/Kuro.8.1.0.AppImage --no-sandbox
+Terminal=false
+Type=Application
