@@ -72,14 +72,11 @@ output * bg /usr/share/backgrounds/default.png fill
     bindsym $mod+Space exec $menu
 
     # alt tabbing
-    bindsym Mod1+tab exec wofi --show window
+    bindsym Mod1+tab exec ~/code/wofi-scripts/windows.py
 
     ### TODO ###
-
     # dunst for notifications
-    # install script
     # multi monitors
-    # wofi - show all opened windows
     # get flameshot working
 
 
