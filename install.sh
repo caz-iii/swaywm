@@ -22,11 +22,10 @@ sudo dnf group upgrade -y --with-optional Multimedia
 # DNF
 echo "-----INSTALLING DNF PACKAGES-----"
 sudo dnf install -y \
-    arandr \
-    awesome \
+    sway \
+    dunst \
     chromium \
     discord \
-    elementary-icon-theme \
     flameshot \
     gimp \
     google-chrome \
@@ -39,10 +38,8 @@ sudo dnf install -y \
     neofetch \
     newsboat \
     ranger \
-    rofi \
     stow \
     vim \
-    xrandr \
     zsh
 
 # AppImages
@@ -112,11 +109,6 @@ sudo dnf install -y brave-browser
 echo "-----UPDATING-----"
 sudo dnf update -y
 
-#NVIDIA
-echo "fixing nvidia..."
-sudo dnf remove -y '*nvidia*'
-sudo dnf install -y akmod-nvidia-470xx
-
 # Meslo Fonts
 echo "installing meslo fonts..."
 sudo mkdir /usr/share/fonts/meslolgs-nf
@@ -134,17 +126,14 @@ rm ~/.bashrc
 stow .
 
 # Things I can't wget
-echo "opening a web browser window..."
-firefox \
-    https://www.webex.com/downloads.html \
-    https://www.microsoftedgeinsider.com/en-us/download?platform=linux-rpm \
-    https://slack.com/downloads/linux \
-    https://github.com/davidsmorais/kuro \
-    https://brew.sh/ \
-    https://github.com/romkatv/powerlevel10k
+echo "Install Script Complete!"
+echo "https://www.webex.com/downloads.html"
+echo "https://www.microsoftedgeinsider.com/en-us/download?platform=linux-rpm"
+echo "https://github.com/davidsmorais/kuro"
+echo "https://brew.sh/ "
+echo "https://github.com/romkatv/powerlevel10k"
 
-
-echo "Installation complete. Please reboot."
+# zsh
 echo "Switch shell to zsh:"
 echo "sudo lchsh $USER"
 echo "/bin/zsh"
