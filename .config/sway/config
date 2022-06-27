@@ -18,7 +18,7 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | wofi --show drun | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show drun -s ~/.config/wofi/dracula.css | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -77,19 +77,13 @@ output * bg /usr/share/backgrounds/default.png fill
     ### TODO ###
     # dunst for notifications
     # multi monitors
-    # get flameshot working
-
-
-    # -- Screenshots          
-    # awful.key({  }, "Print", function () awful.spawn.with_shell("flameshot gui -p ~/flameshots/") end,
-    #           {description = "flameshot", group = "launcher"}),
 
     # User Programs
     bindsym $mod+b exec google-chrome
     bindsym $mod+e exec nautilus
     bindsym $mod+v exec codium
     bindsym $mod+c exec gnome-calculator
-    bindsym Print  exec flameshot gui -p ~/flameshots/
+    bindsym Print  exec grim "$HOME/screenshots/$(date '+%y%m%d_%H-%M-%S').png" -g "$(slurp)"
 
     # Bash Scripts
     bindsym Mod1+d exec bash ~/code/bash/dashboard.sh
