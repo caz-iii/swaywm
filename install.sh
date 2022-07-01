@@ -109,6 +109,8 @@ sudo dnf install -y brave-browser
 echo "-----UPDATING-----"
 sudo dnf update -y
 
+echo "-----INSTALLING FONTS & Theme-----"
+
 # Meslo Fonts
 echo "installing meslo fonts..."
 sudo mkdir /usr/share/fonts/meslolgs-nf
@@ -117,6 +119,15 @@ wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20B
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf
 wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf
 sudo mv MesloLGS* /usr/share/fonts/meslolgs-nf
+
+# GTK Theme
+echo "installing GTK theme..."
+wget https://github.com/dracula/gtk/archive/master.zip
+wget https://github.com/dracula/gtk/files/5214870/Dracula.zip
+unzip \*
+mv gtk-master/ dracula/
+sudo mv dracula/ /usr/share/themes
+sudo mv Dracula/ /usr/share/icons
 
 # Stow Dotfiles
 echo "-----SYMBOLICALLY LINK DOTFILES-----"
