@@ -263,5 +263,6 @@ exec_always {
 }
 
 include /etc/sway/config.d/*
+include ~/.config/sway/config.d/*.conf
 default_border pixel 4
 default_floating_border pixel 4
