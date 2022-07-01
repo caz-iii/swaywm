@@ -27,7 +27,7 @@ alias ls="ls -ahN --group-directories-first --color=auto"
 alias cls="clear"
 
 alias w="curl wttr.in"
-alias r="ranger"
+alias r=". ranger"
 alias ii="nautilus . & disown nautilus"
 
 # powerlevel10k
