@@ -6,10 +6,9 @@
     <img src="https://swaywm.org/logo.png" alt="Logo">
     <br />
     <br />
+    <h1 align="center">SwayWM Dotfiles</h1>
   </p>
 </div>
-
-# SwayWM Dotfiles
 
 <!-- ABOUT -->
 This repo is to serve as a backup to myself (or anyone interested) of my configurations for Sway running on top of Fedora Linux. 
