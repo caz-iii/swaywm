@@ -142,6 +142,8 @@ sudo mv Dracula/ /usr/share/icons
 # Stow Dotfiles
 echo "-----SYMBOLICALLY LINK DOTFILES-----"
 mkdir ~/screenshots
+mkdir ~/code 
+mkdir ~/data
 rm *.zip
 rm *.rpm
 rm ~/.bashrc
@@ -149,6 +151,7 @@ stow .
 
 # Things I can't wget
 echo "Install Script Complete!"
+echo "https://github.com/tobiaspc/wofi-scripts"
 echo "https://www.webex.com/downloads.html"
 echo "https://www.microsoftedgeinsider.com/en-us/download?platform=linux-rpm"
 echo "https://brew.sh/"
