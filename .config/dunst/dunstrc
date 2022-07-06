@@ -12,7 +12,8 @@
 #----------------------------------------------------------------------------------
 
 [global]
-    font = Monofur Nerd Font Mono 14
+    width = 375
+    font = Monofur Nerd Font Mono 12
     markup = yes
     format = "<b>%s</b>\n%b"
     sort = yes

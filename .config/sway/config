@@ -94,11 +94,16 @@ bindswitch --reload --locked lid:off output eDP-1 enable
     bindsym $mod+c exec gnome-calculator
     bindsym $mod+t exec notify-send "$(date +'%r [%Y-%m-%d]')"
 
+
     bindsym Print  exec grim "$HOME/screenshots/$(date '+%y%m%d_%H-%M-%S').png" -g "$(slurp)"
 
     # Bash Scripts
     bindsym Mod1+d exec bash ~/code/bash/dashboard.sh
     bindsym Mod1+p exec bash ~/code/bash/finance.sh
+
+    bindsym XF86AudioMute exec bash ~/code/bash/volume.sh mute
+    bindsym XF86AudioRaiseVolume exec bash ~/code/bash/volume.sh up
+    bindsym XF86AudioLowerVolume exec bash ~/code/bash/volume.sh down
 
     # Spawn Floating
     # swaymsg -t get_tree
