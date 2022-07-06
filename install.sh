@@ -83,6 +83,13 @@ curl -s https://api.github.com/repos/marktext/marktext/releases/latest \
     | tr -d \" \
     | wget -qi -
 
+# kuro
+curl -s https://api.github.com/repos/davidsmorais/kuro/releases/latest \
+    | grep "browser_download_url.*x86_64.rpm" \
+    | cut -d : -f 2,3 \
+    | tr -d \" \
+    | wget -qi -
+
 echo "Installing RPMs..."
 sudo rpm -i *.rpm
 
@@ -140,8 +147,7 @@ stow .
 echo "Install Script Complete!"
 echo "https://www.webex.com/downloads.html"
 echo "https://www.microsoftedgeinsider.com/en-us/download?platform=linux-rpm"
-echo "https://github.com/davidsmorais/kuro"
-echo "https://brew.sh/ "
+echo "https://brew.sh/"
 echo "https://github.com/romkatv/powerlevel10k"
 
 # zsh
