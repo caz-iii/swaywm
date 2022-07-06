@@ -67,7 +67,7 @@ sudo npm install --global taskbook
 echo "Downloading RPMs..."
 
 # onlyoffice
-wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
+#wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
 
 # bitwarden
 curl -s https://api.github.com/repos/bitwarden/desktop/releases/latest \
@@ -138,7 +138,8 @@ sudo mv Dracula/ /usr/share/icons
 
 # Stow Dotfiles
 echo "-----SYMBOLICALLY LINK DOTFILES-----"
-mkdir ~/flameshots
+mkdir ~/screenshots
+rm *.zip
 rm *.rpm
 rm ~/.bashrc
 stow .
@@ -154,3 +155,10 @@ echo "https://github.com/romkatv/powerlevel10k"
 echo "Switch shell to zsh:"
 echo "sudo lchsh $USER"
 echo "/bin/zsh"
+
+#git
+echo "Git Creds:"
+echo "git config --global user.name"
+echo "git config --global user.email"
+echo "git config --global credential.helper store"
+echo "git push or pull"
