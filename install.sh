@@ -31,7 +31,6 @@ sudo dnf install -y \
     google-chrome \
     hugo \
     kitty \
-    liberation-narrow-fonts \
     lxappearance \
     mpv \
     npm \
@@ -40,7 +39,11 @@ sudo dnf install -y \
     ranger \
     stow \
     vim \
-    zsh
+    zsh \
+    liberation-narrow-fonts \
+    dejavu-sans-fonts \
+    dejavu-sans-mono-fonts \
+    dejavu-serif-fonts
 
 # AppImages
 echo "-----INSTALLING APPIMAGES-----"
@@ -67,7 +70,7 @@ sudo npm install --global taskbook
 echo "Downloading RPMs..."
 
 # onlyoffice
-#wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
+wget https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm
 
 # bitwarden
 curl -s https://api.github.com/repos/bitwarden/desktop/releases/latest \
