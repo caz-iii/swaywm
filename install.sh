@@ -26,12 +26,10 @@ sudo dnf install -y \
     dunst \
     chromium \
     discord \
-    flameshot \
     gimp \
     google-chrome \
     hugo \
     kitty \
-    lxappearance \
     mpv \
     npm \
     neofetch \
