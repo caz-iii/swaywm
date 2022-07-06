@@ -153,6 +153,7 @@ echo "https://www.webex.com/downloads.html"
 echo "https://www.microsoftedgeinsider.com/en-us/download?platform=linux-rpm"
 echo "https://brew.sh/"
 echo "https://github.com/romkatv/powerlevel10k"
+echo "https://github.com/romkatv/powerlevel10k/issues/671"
 
 # zsh
 echo "Switch shell to zsh:"
