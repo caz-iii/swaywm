@@ -62,7 +62,7 @@ Add the following lines:
 The `install.sh` script will take care of updating the system and installing programs. 
 
 ```bash
-cd sway-dotfiles
+cd swaywm
 ```
 
 ```bash
