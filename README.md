@@ -12,8 +12,6 @@
 # SwayWM Dotfiles
 
 <!-- ABOUT -->
-## About
-
 This repo is to serve as a backup to myself (or anyone interested) of my configurations for Sway running on top of Fedora Linux. 
 
 ### Built With
