@@ -92,6 +92,8 @@ bindswitch --reload --locked lid:off output eDP-1 enable
     bindsym $mod+e exec nautilus
     bindsym $mod+v exec codium
     bindsym $mod+c exec gnome-calculator
+    bindsym $mod+t exec notify-send "$(date +'%r [%Y-%m-%d]')"
+
     bindsym Print  exec grim "$HOME/screenshots/$(date '+%y%m%d_%H-%M-%S').png" -g "$(slurp)"
 
     # Bash Scripts
@@ -108,12 +110,6 @@ bindswitch --reload --locked lid:off output eDP-1 enable
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
-
-    # Volume
-    bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-    bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
