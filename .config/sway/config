@@ -95,7 +95,7 @@ bindswitch --reload --locked lid:off output eDP-1 enable
     bindsym $mod+t exec notify-send "$(date +'%r [%Y-%m-%d]')"
 
 
-    bindsym Print  exec grim "$HOME/screenshots/$(date '+%y%m%d_%H-%M-%S').png" -g "$(slurp)"
+    bindsym Print  exec grim -g "$(slurp)" "$HOME/screenshots/$(date '+%y%m%d_%H-%M-%S').png" 
 
     # Bash Scripts
     bindsym Mod1+d exec bash ~/code/bash/dashboard.sh
