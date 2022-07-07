@@ -218,16 +218,16 @@ mode "resize" {
     # right will grow the containers width
     # up will shrink the containers height
     # down will grow the containers height
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
+    bindsym $left resize shrink width 60px
+    bindsym $down resize grow height 60px
+    bindsym $up resize shrink height 60px
+    bindsym $right resize grow width 60px
 
     # Ditto, with arrow keys
-    bindsym Left resize shrink width 10px
-    bindsym Down resize grow height 10px
-    bindsym Up resize shrink height 10px
-    bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 60px
+    bindsym Down resize grow height 60px
+    bindsym Up resize shrink height 60px
+    bindsym Right resize grow width 60px
 
     # Return to default mode
     bindsym Return mode "default"
@@ -240,19 +240,19 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
+# bar {
+#     position top
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
+#     # When the status_command prints a new line to stdout, swaybar updates.
+#     # The default just shows the current date and time.
+#     status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+#     colors {
+#         statusline #ffffff
+#         background #323232
+#         inactive_workspace #32323200 #32323200 #5c5c5c
+#     }
+# }
 
 # GTK Theme
 set $gnome-schema org.gnome.desktop.interface
@@ -264,6 +264,8 @@ exec_always {
     #gsettings set $gnome-schema font-name 'Your font name'
 }
 
-include /etc/sway/config.d/*
 default_border pixel 4
 default_floating_border pixel 4
+
+# Run at startup
+exec dunst
